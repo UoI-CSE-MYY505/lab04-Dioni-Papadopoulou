@@ -29,6 +29,13 @@ str_ge:
 #---------
 # Write the subroutine code here
 #  You may move jr ra   if you wish.
+            lbu  t0, 0(a0)
+            lbu  t1, 0(a1)
+            sub  t2, t0,   t1  
+
+            addi a0, a0,   1
+            addi a1, a1,   1
+            add  t3, t1,   t0 
 #---------
             jr   ra
  
